@@ -49,3 +49,5 @@ async def launch_gradio():
     interface.launch(inline=False, server_name="0.0.0.0", server_port=7860, prevent_thread_lock=True)
 
 # Start the app via uvicorn if this script is run directly
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=8000)
